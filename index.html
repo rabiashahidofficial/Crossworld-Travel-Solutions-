@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossworld Travel Solutions – GMNP</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset & global */
+        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', sans-serif; scroll-behavior: smooth;}
+        body {line-height:1.6;}
+        a {text-decoration:none; color:inherit;}
+        button {cursor:pointer;}
+
+        /* Header */
+        header {position:fixed; top:0; left:0; width:100%; background:#4B0082; color:white; z-index:1000; display:flex; justify-content:space-between; align-items:center; padding:10px 20px;}
+        header .logo {font-weight:700; font-size:1.5rem;}
+        nav a {margin:0 10px; color:white; font-weight:500;}
+        nav a:hover {text-decoration:underline;}
+        .header-btn {background:#FFD700; color:#000; padding:8px 15px; border:none; border-radius:5px; font-weight:600; margin-left:15px;}
+
+        /* Hero */
+        .hero {height:600px; background:url('https://images.unsplash.com/photo-1588776814546-1f3f0d84c91c?auto=format&fit=crop&w=1920&q=80') no-repeat center/cover; display:flex; flex-direction:column; justify-content:center; align-items:center; color:white; text-align:center; padding:0 20px;}
+        .hero h1 {font-size:2.8rem; font-weight:700; margin-bottom:15px; text-shadow:2px 2px 8px rgba(0,0,0,0.5);}
+        .hero p {font-size:1.2rem; margin-bottom:25px; text-shadow:1px 1px 6px rgba(0,0,0,0.5);}
+        .hero .hero-btns button {margin:0 10px; padding:10px 20px; border:none; border-radius:5px; font-weight:600;}
+        .hero .hero-btns .apply {background:#FFD700; color:#000;}
+        .hero .hero-btns .consult {background:#800080; color:white;}
+
+        /* Sections */
+        section {padding:80px 20px; max-width:1200px; margin:0 auto;}
+        .about, .courses, .why, .contact {margin-top:80px;}
+        h2 {font-size:2rem; margin-bottom:20px; color:#4B0082;}
+        p {margin-bottom:15px;}
+        .btn {background:#FFD700; color:#000; padding:10px 20px; border:none; border-radius:5px; font-weight:600; margin-top:15px; display:inline-block;}
+
+        /* Courses Grid */
+        .courses-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+        .course-card {padding:20px; border:1px solid #ccc; border-radius:8px; text-align:center; transition:0.3s; background:white;}
+        .course-card:hover {transform:translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+        .course-card h3 {margin-bottom:10px; color:#4B0082;}
+        
+        /* Floating WhatsApp */
+        .whatsapp {position:fixed; bottom:25px; right:25px; background:#25D366; width:60px; height:60px; border-radius:50%; display:flex; justify-content:center; align-items:center; box-shadow:0 5px 15px rgba(0,0,0,0.3);}
+        .whatsapp a {color:white; font-size:2rem;}
+        /* Contact form iframe responsive */
+        .contact iframe {width:100%; height:500px; border:none;}
+        @media(max-width:768px){.hero h1{font-size:2rem;} .hero p{font-size:1rem;} .hero .hero-btns button{margin:5px 0; width:150px;}}
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Crossworld Travel Solutions</div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#courses">Courses</a>
+            <a href="#why">Why Choose Us</a>
+            <a href="#contact">Contact</a>
+            <button class="header-btn" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Apply Now</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <h1>GLOBAL MEDICS NHS PROGRAMME (GMNP)</h1>
+        <p>Your Complete Pathway to GMC Registration & NHS Career</p>
+        <div class="hero-btns">
+            <button class="apply" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Apply Now</button>
+            <button class="consult" onclick="window.open('https://wa.me/923001234567','_blank')">Book Free Consultation</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About the Programme</h2>
+        <p>The GMNP programme is designed to help healthcare professionals successfully navigate GMC registration and start their NHS career with confidence. We provide complete guidance, training, and support at every step.</p>
+        <button class="btn" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Start Your NHS Journey</button>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <h2>Our Training & Courses</h2>
+        <div class="courses-grid">
+            <div class="course-card">
+                <h3>IELTS / OET Preparation</h3>
+                <p>Improve your language skills and meet the required proficiency for GMC registration.</p>
+            </div>
+            <div class="course-card">
+                <h3>PLAB 1</h3>
+                <p>Comprehensive training to successfully pass the PLAB 1 exam.</p>
+            </div>
+            <div class="course-card">
+                <h3>PLAB 2</h3>
+                <p>Practical skill-based training to ensure PLAB 2 exam success.</p>
+            </div>
+            <div class="course-card">
+                <h3>Clinical Attachment</h3>
+                <p>Hands-on experience in NHS hospitals to prepare for real-world clinical practice.</p>
+            </div>
+        </div>
+        <button class="btn" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Check Eligibility</button>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why" id="why">
+        <h2>Why Choose Us</h2>
+        <ul>
+            <li>Career Planning & Guidance</li>
+            <li>NHS Induction & Orientation</li>
+            <li>CV Enhancement & Mock Interviews</li>
+            <li>Job Application Assistance</li>
+            <li>Continuous Support Throughout Process</li>
+        </ul>
+        <button class="btn" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Apply Now</button>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <!-- Google Form Embed -->
+        <div id="form-section">
+            <iframe src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true">Loading…</iframe>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp -->
+    <div class="whatsapp">
+        <a href="https://wa.me/923001234567" target="_blank">&#x2709;</a>
+    </div>
+
+</body>
+</html>
