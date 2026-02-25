@@ -9,12 +9,12 @@
     <style>
         /* Reset & global */
         * { margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', sans-serif; scroll-behavior: smooth;}
-        body {line-height:1.6;}
+        body {line-height:1.6; background:#f5f5f5;}
         a {text-decoration:none; color:inherit;}
-        button {cursor:pointer;}
-
+        button {cursor:pointer; transition:0.3s;}
+        
         /* Header */
-        header {position:fixed; top:0; left:0; width:100%; background:#4B0082; color:white; z-index:1000; display:flex; justify-content:space-between; align-items:center; padding:10px 20px;}
+        header {position:fixed; top:0; left:0; width:100%; background:#4B0082; color:white; z-index:1000; display:flex; justify-content:space-between; align-items:center; padding:10px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.2);}
         header .logo {font-weight:700; font-size:1.5rem;}
         nav a {margin:0 10px; color:white; font-weight:500;}
         nav a:hover {text-decoration:underline;}
@@ -29,7 +29,7 @@
         .hero .hero-btns .consult {background:#800080; color:white;}
 
         /* Sections */
-        section {padding:80px 20px; max-width:1200px; margin:0 auto;}
+        section {padding:80px 20px; max-width:1200px; margin:0 auto; background:white; border-radius:8px; margin-bottom:40px; box-shadow:0 5px 15px rgba(0,0,0,0.05);}
         .about, .courses, .why, .contact {margin-top:80px;}
         h2 {font-size:2rem; margin-bottom:20px; color:#4B0082;}
         p {margin-bottom:15px;}
@@ -45,8 +45,12 @@
         .whatsapp {position:fixed; bottom:25px; right:25px; background:#25D366; width:60px; height:60px; border-radius:50%; display:flex; justify-content:center; align-items:center; box-shadow:0 5px 15px rgba(0,0,0,0.3);}
         .whatsapp a {color:white; font-size:2rem;}
         /* Contact form iframe responsive */
-        .contact iframe {width:100%; height:500px; border:none;}
-        @media(max-width:768px){.hero h1{font-size:2rem;} .hero p{font-size:1rem;} .hero .hero-btns button{margin:5px 0; width:150px;}}
+        .contact iframe {width:100%; height:600px; border:none; border-radius:5px;}
+        @media(max-width:768px){
+            .hero h1{font-size:2rem;} 
+            .hero p{font-size:1rem;} 
+            .hero .hero-btns button{margin:5px 0; width:150px;}
+        }
     </style>
 </head>
 <body>
@@ -70,7 +74,7 @@
         <p>Your Complete Pathway to GMC Registration & NHS Career</p>
         <div class="hero-btns">
             <button class="apply" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Apply Now</button>
-            <button class="consult" onclick="window.open('https://wa.me/923001234567','_blank')">Book Free Consultation</button>
+            <button class="consult" onclick="window.open('https://wa.me/92331007787','_blank')">Book Free Consultation</button>
         </div>
     </section>
 
@@ -123,13 +127,13 @@
         <h2>Contact Us</h2>
         <!-- Google Form Embed -->
         <div id="form-section">
-            <iframe src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeZEBtJK2US6g8m1f-1PxsRM5jLORbE6mPZy0tGesFgI1SMaw/viewform?embedded=true">Loading…</iframe>
         </div>
     </section>
 
     <!-- Floating WhatsApp -->
     <div class="whatsapp">
-        <a href="https://wa.me/923001234567" target="_blank">&#x2709;</a>
+        <a href="https://wa.me/92331007787" target="_blank">&#x2709;</a>
     </div>
 
 </body>
