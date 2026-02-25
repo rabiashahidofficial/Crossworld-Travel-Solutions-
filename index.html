@@ -1,73 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crossworld Travel Solutions – GMNP</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for social icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', sans-serif; scroll-behavior: smooth;}
-        body {line-height:1.6;}
-        a {text-decoration:none; color:inherit;}
-        button {cursor:pointer;}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crossworld Travel Solutions – GMNP</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!-- Font Awesome for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Roboto', sans-serif; scroll-behavior: smooth;}
+body {line-height:1.6;}
+a {text-decoration:none; color:inherit;}
+button {cursor:pointer;}
 
-        /* Header */
-        header {position:fixed; top:0; left:0; width:100%; background:#4B0082; color:white; z-index:1000; display:flex; justify-content:space-between; align-items:center; padding:10px 20px;}
-        header .logo {font-weight:700; font-size:1.5rem;}
-        nav a {margin:0 10px; color:white; font-weight:500;}
-        nav a:hover {text-decoration:underline;}
-        .header-btn {background:#FFD700; color:#000; padding:8px 15px; border:none; border-radius:5px; font-weight:600; margin-left:15px;}
+/* Header */
+header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#4B0082;
+    color:white;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 20px;
+}
+.logo-left img {height:50px;}
+nav {flex:1; text-align:center;}
+nav a {margin:0 10px; color:white; font-weight:500;}
+nav a:hover {text-decoration:underline;}
+.header-btn {background:#FFD700; color:#000; padding:8px 15px; border:none; border-radius:5px; font-weight:600; margin-left:15px;}
 
-        /* Hero */
-        .hero {height:600px; background:url('https://images.unsplash.com/photo-1588776814546-1f3f0d84c91c?auto=format&fit=crop&w=1920&q=80') no-repeat center/cover; display:flex; flex-direction:column; justify-content:center; align-items:center; color:white; text-align:center; padding:0 20px;}
-        .hero h1 {font-size:2.8rem; font-weight:700; margin-bottom:15px; text-shadow:2px 2px 8px rgba(0,0,0,0.5);}
-        .hero p {font-size:1.2rem; margin-bottom:25px; text-shadow:1px 1px 6px rgba(0,0,0,0.5);}
-        .hero .hero-btns button {margin:0 10px; padding:10px 20px; border:none; border-radius:5px; font-weight:600;}
-        .hero .hero-btns .apply {background:#FFD700; color:#000;}
-        .hero .hero-btns .consult {background:#800080; color:white;}
+/* Partner Logo below header */
+.partner-logo {
+    margin-top:70px; /* same as header height */
+    text-align:center;
+    background:#fff;
+    padding:10px 0;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+.partner-logo img {height:60px;}
 
-        /* Sections */
-        section {padding:80px 20px; max-width:1200px; margin:0 auto;}
-        .about, .courses, .why, .contact {margin-top:80px;}
-        h2 {font-size:2rem; margin-bottom:20px; color:#4B0082;}
-        p {margin-bottom:15px;}
-        .btn {background:#FFD700; color:#000; padding:10px 20px; border:none; border-radius:5px; font-weight:600; margin-top:15px; display:inline-block;}
+/* Hero */
+.hero {position:relative; height:600px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:white;}
+.hero-image img {position:absolute; bottom:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.4; z-index:1;}
 
-        /* Courses Grid */
-        .courses-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
-        .course-card {padding:20px; border:1px solid #ccc; border-radius:8px; text-align:center; transition:0.3s; background:white;}
-        .course-card:hover {transform:translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.1);}
-        .course-card h3 {margin-bottom:10px; color:#4B0082;}
+/* Hero Text */
+.hero-title {
+    color:#FFD700;
+    font-size:3rem;
+    font-weight:900;
+    text-shadow:2px 2px 8px rgba(0,0,0,0.6);
+    margin-bottom:15px;
+    letter-spacing:1px;
+}
+.hero-subtitle {
+    color:#FFD700;
+    font-family:'Brush Script MT', cursive, sans-serif;
+    font-size:1.6rem;
+    font-weight:500;
+    text-shadow:1px 1px 6px rgba(0,0,0,0.5);
+    margin-bottom:25px;
+}
+.hero .hero-btns button {margin:0 10px; padding:10px 20px; border:none; border-radius:5px; font-weight:600;}
+.hero .hero-btns .apply {background:#FFD700; color:#000;}
+.hero .hero-btns .consult {background:#800080; color:white;}
 
-        /* Contact / Social Links */
-        .social-links {display:flex; gap:20px; font-size:2rem; margin-top:20px;}
-        .social-links a {color:#4B0082; transition:0.3s;}
-        .social-links a:hover {color:#FFD700;}
+/* Sections */
+section {padding:80px 20px; max-width:1200px; margin:0 auto;}
+h2 {font-size:2rem; margin-bottom:20px; color:#4B0082;}
+h2.highlight-yellow {background:#FFD700; display:inline-block; padding:5px;}
+h2.highlight-purple {background:#800080; color:white; display:inline-block; padding:5px;}
+p {margin-bottom:15px;}
+.btn {background:#FFD700; color:#000; padding:10px 20px; border:none; border-radius:5px; font-weight:600; margin-top:15px; display:inline-block;}
 
-        /* Floating WhatsApp (optional) */
-        .whatsapp {position:fixed; bottom:25px; right:25px; background:#25D366; width:60px; height:60px; border-radius:50%; display:flex; justify-content:center; align-items:center; box-shadow:0 5px 15px rgba(0,0,0,0.3);}
-        .whatsapp a {color:white; font-size:2rem;}
+/* About / Why Section Layout */
+.about-content, .why-content {display:flex; align-items:center; gap:20px; flex-wrap:wrap;}
+.about-content img, .why-content img {width:45%; border-radius:8px; opacity:0.9;}
+.why-content ul {width:50%; list-style:disc; padding-left:20px;}
 
-        /* Contact form iframe responsive */
-        #form-section iframe {width:100%; height:500px; border:none;}
-        #form-section {display:none; margin-top:40px;}
+/* Courses Grid */
+.courses-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+.course-card {padding:20px; border:1px solid #ccc; border-radius:8px; text-align:center; transition:0.3s; background:white;}
+.course-card:hover {transform:translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+.course-card h3 {margin-bottom:10px; color:#4B0082;}
 
-        @media(max-width:768px){
-            .hero h1{font-size:2rem;}
-            .hero p{font-size:1rem;}
-            .hero .hero-btns button{margin:5px 0; width:150px;}
-            .social-links {gap:10px; font-size:1.5rem;}
-        }
-    </style>
+/* Contact / Social Links */
+.social-links {display:flex; gap:20px; font-size:2rem; margin-top:20px;}
+.social-links a {color:#4B0082; transition:0.3s;}
+.social-links a:hover {color:#FFD700;}
+
+/* Floating WhatsApp */
+.whatsapp {position:fixed; bottom:25px; right:25px; background:#25D366; width:60px; height:60px; border-radius:50%; display:flex; justify-content:center; align-items:center; box-shadow:0 5px 15px rgba(0,0,0,0.3);}
+.whatsapp a {color:white; font-size:2rem;}
+
+/* Contact form iframe responsive */
+#form-section iframe {width:100%; height:500px; border:none;}
+#form-section {display:none; margin-top:40px;}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero h1{font-size:2rem;}
+    .hero p{font-size:1rem;}
+    .hero .hero-btns button{margin:5px 0; width:150px;}
+    .social-links {gap:10px; font-size:1.5rem;}
+    .about-content img, .why-content img {width:100%; margin-bottom:20px;}
+    .why-content ul {width:100%;}
+}
+</style>
 </head>
 <body>
 
 <!-- Header -->
 <header>
-    <div class="logo">Crossworld Travel Solutions</div>
+    <div class="logo-left">
+        <img src="your-company-logo.png" alt="Your Company Logo">
+    </div>
     <nav>
         <a href="#hero">Home</a>
         <a href="#about">About</a>
@@ -78,26 +129,39 @@
     </nav>
 </header>
 
+<!-- Partner Logo Below Header -->
+<div class="partner-logo">
+    <img src="partner-company-logo.png" alt="Partner Company Logo">
+</div>
+
 <!-- Hero Section -->
 <section class="hero" id="hero">
-    <h1>GLOBAL MEDICS NHS PROGRAMME (GMNP)</h1>
-    <p>Your Complete Pathway to GMC Registration & NHS Career</p>
-    <div class="hero-btns">
-        <button class="apply" onclick="openForm()">Apply Now</button>
-        <button class="consult" onclick="window.open('https://wa.me/0331007787','_blank')">Book Free Consultation</button>
+    <div class="hero-text">
+        <h1 class="hero-title">GLOBAL MEDICS NHS PROGRAMME (GMNP)</h1>
+        <p class="hero-subtitle">Your Complete Pathway to GMC Registration & NHS Career</p>
+        <div class="hero-btns">
+            <button class="apply" onclick="openForm()">Apply Now</button>
+            <button class="consult" onclick="window.open('https://wa.me/0331007787','_blank')">Book Free Consultation</button>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1588776814546-1f3f0d84c91c?auto=format&fit=crop&w=1920&q=80" alt="Hero Image">
     </div>
 </section>
 
 <!-- About Section -->
 <section class="about" id="about">
-    <h2>About the Programme</h2>
-    <p>The GMNP programme is designed to help healthcare professionals successfully navigate GMC registration and start their NHS career with confidence. We provide complete guidance, training, and support at every step.</p>
+    <h2 class="highlight-yellow">About the Programme</h2>
+    <div class="about-content">
+        <img src="https://images.unsplash.com/photo-1588776814546-1f3f0d84c91c?auto=format&fit=crop&w=800&q=60" alt="About Image">
+        <p>The GMNP programme is designed to help healthcare professionals successfully navigate GMC registration and start their NHS career with confidence. We provide complete guidance, training, and support at every step.</p>
+    </div>
     <button class="btn" onclick="openForm()">Start Your NHS Journey</button>
 </section>
 
 <!-- Courses Section -->
 <section class="courses" id="courses">
-    <h2>Our Training & Courses</h2>
+    <h2 class="highlight-purple">Our Training & Courses</h2>
     <div class="courses-grid">
         <div class="course-card">
             <h3>IELTS / OET Preparation</h3>
@@ -121,20 +185,30 @@
 
 <!-- Why Choose Us Section -->
 <section class="why" id="why">
-    <h2>Why Choose Us</h2>
-    <ul>
-        <li>Career Planning & Guidance</li>
-        <li>NHS Induction & Orientation</li>
-        <li>CV Enhancement & Mock Interviews</li>
-        <li>Job Application Assistance</li>
-        <li>Continuous Support Throughout Process</li>
-    </ul>
+    <h2 class="highlight-yellow">Why Choose Us</h2>
+    <div class="why-content">
+        <!-- GitHub image placeholder -->
+        <img src="https://raw.githubusercontent.com/username/repo/branch/your-image.jpg" alt="Why Choose Us Image">
+        <ul>
+            <li>Career Planning & Guidance</li>
+            <li>NHS Induction & Orientation</li>
+            <li>CV Enhancement & Mock Interviews</li>
+            <li>Job Application Assistance</li>
+            <li>Continuous Support Throughout Process</li>
+        </ul>
+    </div>
     <button class="btn" onclick="openForm()">Apply Now</button>
 </section>
 
-<!-- Contact Section with Social Links -->
+<!-- Contact Section -->
 <section class="contact" id="contact">
-    <h2>Contact Us</h2>
+    <h2 class="highlight-purple">Contact Us</h2>
+    <p>
+      Address: 
+      <a href="https://www.google.com/maps/search/?api=1&query=4+%26+5+2nd+Floor+Liberty+Mall+Tahkal+University+Road+Peshawar+Pakistan" target="_blank">
+        #4,5 2nd Floor, Liberty Mall, Tahkal University Road, Peshawar, Pakistan
+      </a>
+    </p>
     <div class="social-links">
         <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="https://instagram.com/yourpage" target="_blank"><i class="fab fa-instagram"></i></a>
