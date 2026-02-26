@@ -1,1 +1,94 @@
 
+# Crossworld Travel Solutions – GMNP Website
+
+Official website for **Crossworld Travel Solutions** promoting the  
+**Global Medics NHS Programme (GMNP)**.
+
+---
+
+## 🌍 About The Project
+
+This is a responsive promotional website built using:
+
+- HTML5
+- CSS3
+- Font Awesome Icons
+- Google Fonts
+- Basic JavaScript
+
+The website provides information about:
+
+- GMNP Programme
+- Training & Courses
+- Post PLAB Support
+- Success Stories
+- Contact Information
+
+---
+
+## 🚀 Live Features
+
+✔ Fixed professional header  
+✔ Smooth scrolling navigation  
+✔ Hero section with overlay image  
+✔ Apply Now button (Google Form integration)  
+✔ WhatsApp floating button  
+✔ Social media integration  
+✔ Responsive design for mobile devices  
+
+---
+
+## 📁 Project Structure
+
+```
+crossworld-travel-website/
+│
+├── index.html
+├── README.md
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+└── images/
+    ├── logo.png
+    ├── company-logo.png
+    └── partner-logo.png
+```
+
+---
+
+## 📞 Contact Information
+
+📍 #4,5 2nd Floor, Liberty Mall, Tahkal University Road, Peshawar, Pakistan  
+📧 crossworldpew@gmail.com  
+📱 +92 3269575050  
+
+---
+
+## 🏢 Official Partner
+
+Crossworld Travel Solutions is an official partner of  
+**Hive Medical Academy UK**
+
+---
+
+## 👩‍💻 Developed By
+
+Website designed and developed for Crossworld Travel Solutions.
+
+---
+
+## 📌 Future Improvements
+
+- Add dropdown navigation
+- Add animation on scroll
+- Add testimonials slider
+- Convert inline CSS to separate CSS file
+- Add backend contact form
+
+---
+
+© 2026 Crossworld Travel Solutions. All Rights Reserved.
